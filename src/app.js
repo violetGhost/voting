@@ -18,6 +18,7 @@ app.use(session({ cookie: { maxAge: 60000 },
                   resave: false, 
                   saveUninitialized: false}));*/
 app.use(cors());
+app.use(express.static('build'));
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 
